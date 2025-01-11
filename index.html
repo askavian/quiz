@@ -3,16 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Small Quiz TBD"><!--NEEDS TO BE CHANGED-->
-	<meta name="keywords" content="TBD"><!--NEEDS TO BE CHANGED-->
+    <meta name="description" content="Small Quiz to decide what Kill Team you should buy.">
+	<meta name="keywords" content="Kill Team, Warhammer, 40k, Games Workshop">
 	<meta name="author" content="Malte M. Boettcher">
-    <title>QUIZ TBD</title><!--NEEDS TO BE CHANGED-->
+    <title>KILL TEAM HELPER</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png"><!--BUGGY-->
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png"><!--BUGGY-->
     <link href="assets/css/style.css" rel="stylesheet"/>
 </head>
 
 <body>
-    TBD TEST REFACTOR<!--NEEDS TO BE CHANGED-->
+    <header>
+        <h1>Warhammer 40.000 Kill Team Helper</h1>
+        <p>Which Team should I play?</p>
+    </header>
+
+    <main>
+        <div class="content-container">
+            <img class="content-background" src="/assets/js/scripts.js" alt="Content Image"><!--TO BE REVIEWED-->
+            <div class="content-question">
+                <p class="text-content" id="question-text"></p>
+            </div>
+            <div class="input">
+                <span>
+                    <button class="button" id="button-yes">YES</button>
+                </span>
+                <span>
+                    <button class="button" id="button-no">NO</button>
+                </span>
+                <span>
+                    <button class="button" id="button-startnew">Start Over</button>
+                </span>         
+            </div>
+        </div>
+    </main>        
 
     <script src="assets/js/scripts.js"></script> <!--RUN LAST TO LOAD SCRIPTS-->
+
+    <footer>
+        <p>by Malte M. Boettcher</p>
+    </footer>
 </body>
 </html>
