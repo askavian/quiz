@@ -1,8 +1,75 @@
 
-/*GENERAL LAYOUT*/
 body {
-    font-family: Arial, Helvetica, sans-serif
     padding: 0%;
     margin: 0%;
     background-color: #fff;
+}
+
+header {
+    height: 100%;  
+    margin-top: 0%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: right;
+    text-shadow: -1px 0 #FFA500, 0 1px #FFA500, 1px 0 #FFA500, 0 -1px #FFA500; /*Help with Accessibility by High Contrastfrom Yvy, my Co-Student at Code Institute*/
+    background-image: url(../images/elements/site_banner.webp);
+    background-color: #6495ed;
+}
+
+header h1 {
+    margin-top: 25%;
+    font-size: auto;
+}
+  
+header p {
+    margin-top: 25%;
+    text-align: center;
+    font-size: auto;
+}
+
+#container {
+    width: 80%;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25.6px;
+    align-items: center;
+    justify-content: center;
+    background-color: #000;
+}
+
+#content-background {
+    width: 80%;
+    margin-top: 2rem auto;
+    margin-bottom: 2rem auto;
+    align-items: center;
+    justify-content: center;
+}
+
+#content-question {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 2rem auto;
+    margin-bottom: 2rem auto;
+    margin-left: 2rem auto;
+    text-align: center;
+    color: #fff;
+}
+  
+.text-content {
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+}
+
+#input {
+
+}
+
+footer {
+    background-color: #d3d3d3;
+    bottom: 0;
+    right: 0;
+    height: 1%;
+    padding: 20px 10%;
+    clear: both;
+    position: relative;
 }
