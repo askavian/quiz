@@ -52,7 +52,7 @@ span {
     align-items: center;
     justify-content: center;
     margin: 1%;
-    width: 26%; /*TO BE REVIEWED*/
+    width: 17%; /*TO BE REVIEWED*/
 }
 
 .button {
@@ -67,6 +67,10 @@ span {
 
 .button:hover {
     font-size: 1.3em;
+}
+
+#button-start {
+    background-color: #808080;
 }
 
 #button-yes {
