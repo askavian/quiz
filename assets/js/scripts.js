@@ -1,7 +1,9 @@
 
 
-
-
+/*
+* Nodes with a ONE or TWO digit ids are NAV NOTES They cannot be the END
+* NAV NOTES contain no images, only text questions with YES or NO answer and RESTART
+*/
 // Quiz Starts here
 const textNodes = [
     {
@@ -14,7 +16,6 @@ const textNodes = [
                 },
             ],
         },
-
 // First Question
     {
         id: 2,
@@ -27,6 +28,10 @@ const textNodes = [
                 {
                 text: "NO",
                 nextText: 3,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
                 },
             ],
         },
@@ -42,9 +47,624 @@ const textNodes = [
                 text: "NO",
                 nextText: 5,    
                 },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
             ],
         },
-
+    {
+        id: 4,
+        text: "Do you listen to Techno?",
+        options: [
+                {
+                text: "YES",
+                nextText: 136,
+                },
+                {
+                text: "NO",
+                nextText: 110,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
+    {
+        id: 5,
+        text: "Do you consider yourself a good person?",
+        options: [
+                {
+                text: "YES",
+                nextText: 7,
+                },
+                {
+                text: "NO",
+                nextText: 31,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
+    {
+        id: 6,
+        text: "Do you play Call of Duty?",
+        options: [
+                {
+                text: "YES",
+                nextText: 9,
+                },
+                {
+                text: "NO",
+                nextText: 8,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
+    {
+        id: 7,
+        text: "Are you religous?",
+        options: [
+                {
+                text: "YES",
+                nextText: 11,
+                },
+                {
+                text: "NO",
+                nextText: 10,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
+    {
+        id: 8,
+        text: "Do you like Extreme Violence?",
+        options: [
+                {
+                text: "YES",
+                nextText: 13,
+                },
+                {
+                text: "NO",
+                nextText: 12,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
+    {
+        id: 9,
+        text: "Do you like Vanilla Ice Cream?",
+        options: [
+                {
+                text: "YES",
+                nextText: 102,
+                },
+                {
+                text: "NO",
+                nextText: 101,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
+    {
+        id: 10,
+        text: "Is Law & Order important to you?",
+        options: [
+                {
+                text: "YES",
+                nextText: 21,
+                },
+                {
+                text: "NO",
+                nextText: 25,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
+    {
+        id: 11,
+        text: "Do you like to tell people about it?",
+        options: [
+                {
+                text: "YES",
+                nextText: 116,
+                },
+                {
+                text: "NO",
+                nextText: 115,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
+    {
+        id: 12,
+        text: "Are you over 40?",
+        options: [
+                {
+                text: "YES",
+                nextText: 15,
+                },
+                {
+                text: "NO",
+                nextText: 14,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
+    {
+        id: 13,
+        text: "Do you like Melee Combat?",
+        options: [
+                {
+                text: "YES",
+                nextText: 104,
+                },
+                {
+                text: "NO",
+                nextText: 103,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
+    {
+        id: 14,
+        text: "Do you shower regularely?",
+        options: [
+                {
+                text: "YES",
+                nextText: 106,
+                },
+                {
+                text: "NO",
+                nextText: 105,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
+    {
+        id: 15,
+        text: "Do you like Magic?",
+        options: [
+                {
+                text: "YES",
+                nextText: 108,
+                },
+                {
+                text: "NO",
+                nextText: 107,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
+    {
+        id: 16,
+        text: "Do you look down on other people?",
+        options: [
+                {
+                text: "YES",
+                nextText: 18,
+                },
+                {
+                text: "NO",
+                nextText: 17,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
+    {
+        id: 17,
+        text: "Are you a moral person?",
+        options: [
+                {
+                text: "YES",
+                nextText: 109,
+                },
+                {
+                text: "NO",
+                nextText: 19,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
+    {
+        id: 18,
+        text: "Do you think you are funny?",
+        options: [
+                {
+                text: "YES",
+                nextText: 111,
+                },
+                {
+                text: "NO",
+                nextText: 4,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
+    {
+        id: 19,
+        text: "Are you stupid?",
+        options: [
+                {
+                text: "YES",
+                nextText: 112,
+                },
+                {
+                text: "NO",
+                nextText: 20,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
+    {
+        id: 20,
+        text: "Do you listen to Heavy Metal?",
+        options: [
+                {
+                text: "YES",
+                nextText: 114,
+                },
+                {
+                text: "NO",
+                nextText: 113,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
+    {
+        id: 21,
+        text: "Do you like Aliens?",
+        options: [
+                {
+                text: "YES",
+                nextText: 16,
+                },
+                {
+                text: "NO",
+                nextText: 22,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
+    {
+        id: 22,
+        text: "Are you a fascist?",
+        options: [
+                {
+                text: "YES",
+                nextText: 117,
+                },
+                {
+                text: "NO",
+                nextText: 23,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
+    {
+        id: 23,
+        text: "Do you like the look of fascism?",
+        options: [
+                {
+                text: "YES",
+                nextText: 24,
+                },
+                {
+                text: "NO",
+                nextText: 118,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
+    {
+        id: 24,
+        text: "Do you like Judge Dredd?",
+        options: [
+                {
+                text: "YES",
+                nextText: 120,
+                },
+                {
+                text: "NO",
+                nextText: 119,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
+    {
+        id: 25,
+        text: "Do you work out?",
+        options: [
+                {
+                text: "YES",
+                nextText: 121,
+                },
+                {
+                text: "NO",
+                nextText: 26,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
+    {
+        id: 26,
+        text: "Do you like bending the rules in your favor?",
+        options: [
+                {
+                text: "YES",
+                nextText: 122,
+                },
+                {
+                text: "NO",
+                nextText: 27,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
+    {
+        id: 27,
+        text: "Do you enjoy Blue Collar work?",
+        options: [
+                {
+                text: "YES",
+                nextText: 28,
+                },
+                {
+                text: "NO",
+                nextText: 29,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
+    {
+        id: 28,
+        text: "Do you want to fuck a toaster?",
+        options: [
+                {
+                text: "YES",
+                nextText: 123,
+                },
+                {
+                text: "NO",
+                nextText: 124,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
+    {
+        id: 29,
+        text: "Do you like STAR TREK?",
+        options: [
+                {
+                text: "YES",
+                nextText: 125,
+                },
+                {
+                text: "NO",
+                nextText: 30,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
+    {
+        id: 30,
+        text: "Do you like Pirate Movies?",
+        options: [
+                {
+                text: "YES",
+                nextText: 126,
+                },
+                {
+                text: "NO",
+                nextText: 127,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
+    {
+        id: 31,
+        text: "Are you an Edgelord?",
+        options: [
+                {
+                text: "YES",
+                nextText: 32,
+                },
+                {
+                text: "NO",
+                nextText: 33,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
+    {
+        id: 32,
+        text: "Are you a pervert?",
+        options: [
+                {
+                text: "YES",
+                nextText: 128,
+                },
+                {
+                text: "NO",
+                nextText: 129,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
+    {
+        id: 33,
+        text: "Do you enjoy playing evil?",
+        options: [
+                {
+                text: "YES",
+                nextText: 34,
+                },
+                {
+                text: "NO",
+                nextText: 35,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
+    {
+        id: 34,
+        text: "Do you care about animals more than humans?",
+        options: [
+                {
+                text: "YES",
+                nextText: 130,
+                },
+                {
+                text: "NO",
+                nextText: 36,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
+    {
+        id: 35,
+        text: "Do you mind if people make fun of you?",
+        options: [
+                {
+                text: "YES",
+                nextText: 131,
+                },
+                {
+                text: "NO",
+                nextText: 132,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
+    {
+        id: 36,
+        text: "Do you care about your hygene?",
+        options: [
+                {
+                text: "YES",
+                nextText: 37,
+                },
+                {
+                text: "NO",
+                nextText: 133,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
+    {
+        id: 37,
+        text: "Do you think evil needs a bit of order as well?",
+        options: [
+                {
+                text: "YES",
+                nextText: 134,
+                },
+                {
+                text: "NO",
+                nextText: 135,    
+                },
+                {
+                text: "Restart",
+                nextText: 1,
+                },
+            ],
+        },
 /*
 * Nodes with a three digit id above 100 are END NOTES From here you can only Restart the loop
 * END NOTES contain an IMAGE from the results folder
