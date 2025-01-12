@@ -1,3 +1,16 @@
+// loads neccessary elements from index.html
+/*
+const textElement = document.getElementById("text");
+const image = document.getElementById("image");
+const optionButtonsElement = document.getElementsByClassName ("button");
+*/
+let state = {};
+
+function startQuiz() {
+    return "success";
+}
+
+console.log(startQuiz);
 
 
 /*
@@ -1080,4 +1093,4 @@ const textNodes = [
         },                                                           
 ]
 
-console.log("TEST");
+console.log("TEST"); // for debugging only

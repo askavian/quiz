@@ -55,7 +55,7 @@ span {
     width: 17%; /*TO BE REVIEWED*/
 }
 
-.button {
+button {
     border: none;
     color: aliceblue;
     padding: 15px 32px;
@@ -65,23 +65,23 @@ span {
     font-size: 1.0em;
 }
 
-.button:hover {
+button:hover {
     font-size: 1.3em;
 }
 
-#button-start {
+.button-start {
     background-color: #808080;
 }
 
-#button-yes {
+.button-yes {
     background-color: #04AA6D;
 }
 
-#button-no {
+.button-no {
     background-color: #dc143c;
 }
 
-#button-startnew {
+.button-startnew {
     background-color: #808080;
 }
 
