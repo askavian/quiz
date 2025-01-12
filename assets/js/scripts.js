@@ -7,10 +7,20 @@ const optionButtonsElement = document.getElementsByClassName ("button");
 let state = {};
 
 function startQuiz() {
-    return "success";
+    state = {};
+    showTextNode(1);
 }
+console.log(startQuiz); //DEBUGGING check if function is called correctly
 
-console.log(startQuiz);
+function showTextNode(textNodeIndex) {
+    const textNode = textNodes.find((textNode) => textNode.id === textNodeIndex);
+    textElement.innerText = textNode.text;
+}
+console.log(showTextNode); //DEBUGGING check if function is called correctly
+
+
+
+// console.log(startQuiz); DEBUGGING check if function is called correctly
 
 
 /*

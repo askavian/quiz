@@ -1,58 +1,48 @@
 body {
     padding: 0%;
     margin: 0%;
-    background-color: #fff;
+    background-color: #36454F;
 }
 
 header {
     position: absolute;
-    top: 0px;
-    left: 0px;
-    right: 0px;
     width: 100%;
-    max-height: 20vh;
+    max-height: 100px;
     background-repeat: no-repeat;
     color: #000;
     text-shadow: -1px 0 #FFA500, 0 1px #FFA500, 1px 0 #FFA500, 0 -1px #FFA500; /*Help with Accessibility by High Contrastfrom Yvy, my Co-Student at Code Institute*/
     background-image: url(../images/elements/site_banner.webp);
-    background-color: #2f4f4f;
+    background-position: right top;
+}
+
+main {
 }
 
 header h1 {
-    margin-top: 5%;
-    margin-right: 10%;
-    font-size: auto;
+    text-align: center;
 }
 
 .container {
-    background-color: #000;
-    padding: 10%;
     height: 100vh;
     color: aliceblue;
+    margin: 150px 5% 0%;
+    position: absolute;
+    background: #000;
 }
 
 .content-image {/*DEBUGGING*/
-    text-align: center;
     width: 100%;
     height: auto;
-    max-width: 800px;
-    padding-top: 2%;
 }
 
 .text-content {
-    padding-left: 15%;
-    padding-right: 15%;
-    padding-top: 2%;
-    padding-bottom: 3%;
+    padding: 5% 15%;
+    text-align: center;
 }
 
-span {
-    float: left;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1%;
-    width: 17%; /*TO BE REVIEWED*/
+.input {
+    margin: 0 15%;
+    text-align: center;
 }
 
 button {
@@ -63,10 +53,20 @@ button {
     text-decoration: none;
     display: inline-block;
     font-size: 1.0em;
+    margin-bottom: 10px;
+}
+
+.button {
+    display: inline-block;
+    margin-right: 2.5%;
+}
+
+.button:last-child {
+    margin-right: 0;
 }
 
 button:hover {
-    font-size: 1.3em;
+    opacity:.75;
 }
 
 .button-start {
@@ -87,7 +87,6 @@ button:hover {
 
 
 footer {
-	background-color: #2f4f4f;
 	padding: 1em;
     width: 100%;
     max-height: 2%;
@@ -101,4 +100,23 @@ footer p {
     text-align: left;
     padding-left: 10%;
     font-size: auto;
+}
+
+
+@media screen and (min-width: 640px) {
+    .container {
+      width:50%;
+      float: left;
+      left: 25%;
+      margin: 250px 0 0;
+      }
+
+      header {
+        min-height: 200px;
+    }
+
+}
+
+@media screen and (min-width: 1280px) {
+    /* STYLES HERE */
 }
