@@ -51,8 +51,8 @@ const textNodes = [
 */
     {
         id: 100,
-        text: "", // tbd
-        img: "", // tbd
+        text: "Sorry mate! You should not play Kill Team if you value your money. Consider investing in Games Workshop Stocks instead.", // tbd
+        img: ".assets/images/results/gwstocks.webp",
         options: [
                 {
                 text: "Restart",
@@ -448,7 +448,7 @@ const textNodes = [
             ],
         },
     {
-        id: 136, // CURRENTLY NOT IMPLEMENTE Additional branch between ID 110 and ID 18
+        id: 136,
         text: "The results are in! You might like the BLADES OF KHAINE Team",
         img: ".assets/images/results/bladeskhaine.webp",
         options: [
