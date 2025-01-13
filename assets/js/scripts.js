@@ -1,22 +1,33 @@
-// loads neccessary elements from index.html
-/*
+
+// loads neccessary elements from DOM 
 const textElement = document.getElementById("text");
-const image = document.getElementById("image");
-const optionButtonsElement = document.getElementsByClassName ("button");
-*/
-let state = {};
+const imageElement = document.getElementById("image");
+const btnyes = document.getElementById("button-yes");
+const btnno = document.getElementById("button-no");
+const btnstart = document.getElementById("button-start");
+const btnstartnew = document.getElementById("button-startnew");
+
+console.log(document.getElementById("text")); //DEBUGGING check if DOM is called correctly
 
 function startQuiz() {
-    state = {};
-    showTextNode(1);
+    showTextNode(1)
 }
-console.log(startQuiz); //DEBUGGING check if function is called correctly
 
 function showTextNode(textNodeIndex) {
     const textNode = textNodes.find((textNode) => textNode.id === textNodeIndex);
     textElement.innerText = textNode.text;
+    imageElement = textNode.img; 
+ };
+
+function selectOption(option) {
+
 }
-console.log(showTextNode); //DEBUGGING check if function is called correctly
+
+
+
+console.log(startQuiz.showTextNode); //DEBUGGING check if function is called correctly
+
+
 
 
 
@@ -32,6 +43,7 @@ const textNodes = [
     {
         id: 1,
         text: "So you want to get into Kill Team, ey? Lets see where we at here...",
+        img: ".assets/images/readme/debugging_image.png", // debugging image REMOVE LATER
         options: [
                 {
                 text: "Begin",
@@ -1104,3 +1116,5 @@ const textNodes = [
 ]
 
 console.log("TEST"); // for debugging only
+
+startQuiz(); // Loads Quiz as soon as everything is ready

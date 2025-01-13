@@ -69,19 +69,19 @@ button:hover {
     opacity:.75;
 }
 
-.button-start {
+#button-start {
     background-color: #808080;
 }
 
-.button-yes {
+#button-yes {
     background-color: #04AA6D;
 }
 
-.button-no {
+#button-no {
     background-color: #dc143c;
 }
 
-.button-startnew {
+#button-startnew {
     background-color: #808080;
 }
 

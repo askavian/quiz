@@ -7,8 +7,8 @@
 	<meta name="keywords" content="Kill Team, Warhammer, 40k, Games Workshop">
 	<meta name="author" content="Malte M. Boettcher">
     <title>KILL TEAM HELPER</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png"><!--BUGGY-->
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png"><!--BUGGY-->
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
     <link href="assets/css/style.css" rel="stylesheet"/>
 </head>
 
@@ -19,25 +19,24 @@
 
     <main>
         <div class="container">
-            <img class="content-image" id="image" src="assets/images/readme/debugging_image.png" alt="Content Image"><!--TO BE REVIEWED-->
+            <img class="content-image" id="image" src="assets/js/scripts.js" alt="Content Image">
+<!--        <img class="content-image" id="image" src="assets/images/readme/debugging_image.png" alt="Content Image"> DEBUGGING IMAGE --> 
             <div class="content-question">
-                <p class="text-content" id="text">Lorem ipsum dolor sit amet, consetetur sadipscing 
-                    elitr.</p>
+                <p class="text-content" id="text"></p>
             </div>
             <div class="input">
-                    <button class="button-start" id="button">Begin</button>
-                    <button class="button-yes" id="button">YES</button>
-                    <button class="button-no" id="button">NO</button>
-                    <button class="button-startnew" id="button">Restart</button>
+                    <button class="button" id="button-start">Begin</button>
+                    <button class="button" id="button-yes">YES</button>
+                    <button class="button" id="button-no">NO</button>
+                    <button class="button" id="button-startnew">Restart</button>
                 </div>  
             </div>
         </div>
     </main>        
 
-    <script src="assets/js/scripts.js"></script> <!--RUN LAST TO LOAD SCRIPTS-->
-
     <footer>
         <p><strong>by Malte M. Boettcher</strong></p>
     </footer>
+    <script defer src="assets/js/scripts.js"></script> <!--Use defer and run last to build DOM-->
 </body>
 </html>
