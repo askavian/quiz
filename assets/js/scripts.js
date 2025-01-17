@@ -1,7 +1,9 @@
 
 // loads neccessary elements from DOM 
+/*
 const textElement = document.getElementById("text");
 const imageElement = document.getElementById("image");
+const btn = document.getElementById("button");
 const btnyes = document.getElementById("button-yes");
 const btnno = document.getElementById("button-no");
 const btnstart = document.getElementById("button-start");
@@ -16,7 +18,12 @@ function startQuiz() {
 function showTextNode(textNodeIndex) {
     const textNode = textNodes.find((textNode) => textNode.id === textNodeIndex);
     textElement.innerText = textNode.text;
-    imageElement = textNode.img; 
+    while (btn.firstChild) {
+        btn.removeChild(btn.firstChild)
+      }
+      
+
+
  };
 
 function selectOption(option) {
@@ -26,7 +33,48 @@ function selectOption(option) {
 
 
 console.log(startQuiz.showTextNode); //DEBUGGING check if function is called correctly
+*/ 
 
+const textElement = document.getElementById('text')
+const optionButtonsElement = document.getElementById('button')
+
+let state = {}
+
+function startGame() {
+  state = {}
+  showTextNode(1)
+}
+
+function showTextNode(textNodeIndex) {
+  const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
+  textElement.innerText = textNode.text
+  while (optionButtonsElement.firstChild) {
+    optionButtonsElement.removeChild(optionButtonsElement.firstChild)
+  }
+
+  textNode.options.forEach(option => {
+    if (showOption(option)) {
+      const button = document.createElement('button')
+      button.innerText = option.text
+      button.classList.add('btn')
+      button.addEventListener('click', () => selectOption(option))
+      optionButtonsElement.appendChild(button)
+    }
+  })
+}
+
+function showOption(option) {
+  return option.requiredState == null || option.requiredState(state)
+}
+
+function selectOption(option) {
+  const nextTextNodeId = option.nextText
+  if (nextTextNodeId <= 0) {
+    return startGame()
+  }
+  state = Object.assign(state, option.setState)
+  showTextNode(nextTextNodeId)
+}
 
 
 
@@ -1117,4 +1165,4 @@ const textNodes = [
 
 console.log("TEST"); // for debugging only
 
-startQuiz(); // Loads Quiz as soon as everything is ready
+startGame(); // Loads Quiz as soon as everything is ready
