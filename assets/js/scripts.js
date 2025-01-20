@@ -35,6 +35,7 @@ function selectOption(option) {
 console.log(startQuiz.showTextNode); //DEBUGGING check if function is called correctly
 */ 
 
+const imageElement = document.getElementById('image');
 const textElement = document.getElementById('text')
 const optionButtonsElement = document.getElementById('button')
 
@@ -48,9 +49,16 @@ function startGame() {
 function showTextNode(textNodeIndex) {
   const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
   textElement.innerText = textNode.text
+  imageElement.src = textNode.image
+  // this.imageElement.src = textNode.image;
+  document.getElementById('image').src = textNode.image
   while (optionButtonsElement.firstChild) {
     optionButtonsElement.removeChild(optionButtonsElement.firstChild)
   }
+
+  // this.imageElement.src = textNode.img;
+
+  //image.src = textNode.image; // <--- bam
 
   textNode.options.forEach(option => {
     if (showOption(option)) {
@@ -91,7 +99,7 @@ const textNodes = [
     {
         id: 1,
         text: "So you want to get into Kill Team, ey? Lets see where we at here...",
-        img: ".assets/images/readme/debugging_image.png", // debugging image REMOVE LATER
+        image: ".assets/images/transition/1.webp",
         options: [
                 {
                 text: "Begin",
@@ -103,6 +111,7 @@ const textNodes = [
     {
         id: 2,
         text: "Do you like money?",
+        image: ".assets/images/transition/2.webp",
         options: [
                 {
                 text: "YES",
@@ -121,6 +130,7 @@ const textNodes = [
     {
         id: 3,
         text: "Do you like to win?",
+        image: ".assets/images/transition/3.webp",
         options: [
                 {
                 text: "YES",
@@ -139,6 +149,7 @@ const textNodes = [
     {
         id: 4,
         text: "Do you listen to Techno?",
+        image: ".assets/images/transition/4.webp",
         options: [
                 {
                 text: "YES",
@@ -157,6 +168,7 @@ const textNodes = [
     {
         id: 5,
         text: "Do you consider yourself a good person?",
+        image: ".assets/images/transition/5.webp",
         options: [
                 {
                 text: "YES",
@@ -175,6 +187,7 @@ const textNodes = [
     {
         id: 6,
         text: "Do you play Call of Duty?",
+        image: ".assets/images/transition/6.webp",
         options: [
                 {
                 text: "YES",
@@ -193,6 +206,7 @@ const textNodes = [
     {
         id: 7,
         text: "Are you religous?",
+        image: ".assets/images/transition/7.webp",
         options: [
                 {
                 text: "YES",
@@ -211,6 +225,7 @@ const textNodes = [
     {
         id: 8,
         text: "Do you like Extreme Violence?",
+        image: ".assets/images/transition/8.webp",
         options: [
                 {
                 text: "YES",
@@ -229,6 +244,7 @@ const textNodes = [
     {
         id: 9,
         text: "Do you like Vanilla Ice Cream?",
+        image: ".assets/images/transition/9.webp",
         options: [
                 {
                 text: "YES",
@@ -247,6 +263,7 @@ const textNodes = [
     {
         id: 10,
         text: "Is Law & Order important to you?",
+        image: ".assets/images/transition/10.webp",
         options: [
                 {
                 text: "YES",
@@ -265,6 +282,7 @@ const textNodes = [
     {
         id: 11,
         text: "Do you like to tell people about it?",
+        image: ".assets/images/transition/11.webp",
         options: [
                 {
                 text: "YES",
@@ -283,6 +301,7 @@ const textNodes = [
     {
         id: 12,
         text: "Are you over 40?",
+        image: ".assets/images/transition/12.webp",
         options: [
                 {
                 text: "YES",
@@ -301,6 +320,7 @@ const textNodes = [
     {
         id: 13,
         text: "Do you like Melee Combat?",
+        image: ".assets/images/transition/13.webp",
         options: [
                 {
                 text: "YES",
@@ -319,6 +339,7 @@ const textNodes = [
     {
         id: 14,
         text: "Do you shower regularely?",
+        image: ".assets/images/transition/14.webp",
         options: [
                 {
                 text: "YES",
@@ -337,6 +358,7 @@ const textNodes = [
     {
         id: 15,
         text: "Do you like Magic?",
+        image: ".assets/images/transition/15.webp",
         options: [
                 {
                 text: "YES",
@@ -355,6 +377,7 @@ const textNodes = [
     {
         id: 16,
         text: "Do you look down on other people?",
+        image: ".assets/images/transition/16.webp",
         options: [
                 {
                 text: "YES",
@@ -373,6 +396,7 @@ const textNodes = [
     {
         id: 17,
         text: "Are you a moral person?",
+        image: ".assets/images/transition/17.webp",
         options: [
                 {
                 text: "YES",
@@ -391,6 +415,7 @@ const textNodes = [
     {
         id: 18,
         text: "Do you think you are funny?",
+        image: ".assets/images/transition/18.webp",
         options: [
                 {
                 text: "YES",
@@ -409,6 +434,7 @@ const textNodes = [
     {
         id: 19,
         text: "Are you stupid?",
+        image: ".assets/images/transition/19.webp",
         options: [
                 {
                 text: "YES",
@@ -427,6 +453,7 @@ const textNodes = [
     {
         id: 20,
         text: "Do you listen to Heavy Metal?",
+        image: ".assets/images/transition/20.webp",
         options: [
                 {
                 text: "YES",
@@ -445,6 +472,7 @@ const textNodes = [
     {
         id: 21,
         text: "Do you like Aliens?",
+        image: ".assets/images/transition/21.webp",
         options: [
                 {
                 text: "YES",
@@ -463,6 +491,7 @@ const textNodes = [
     {
         id: 22,
         text: "Are you a fascist?",
+        image: ".assets/images/transition/22.webp",
         options: [
                 {
                 text: "YES",
@@ -481,6 +510,7 @@ const textNodes = [
     {
         id: 23,
         text: "Do you like the look of fascism?",
+        image: ".assets/images/transition/23.webp",
         options: [
                 {
                 text: "YES",
@@ -499,6 +529,7 @@ const textNodes = [
     {
         id: 24,
         text: "Do you like Judge Dredd?",
+        image: ".assets/images/transition/24.webp",
         options: [
                 {
                 text: "YES",
@@ -517,6 +548,7 @@ const textNodes = [
     {
         id: 25,
         text: "Do you work out?",
+        image: ".assets/images/transition/25.webp",
         options: [
                 {
                 text: "YES",
@@ -535,6 +567,7 @@ const textNodes = [
     {
         id: 26,
         text: "Do you like bending the rules in your favor?",
+        image: ".assets/images/transition/26.webp",
         options: [
                 {
                 text: "YES",
@@ -553,6 +586,7 @@ const textNodes = [
     {
         id: 27,
         text: "Do you enjoy Blue Collar work?",
+        image: ".assets/images/transition/27.webp",
         options: [
                 {
                 text: "YES",
@@ -571,6 +605,7 @@ const textNodes = [
     {
         id: 28,
         text: "Do you want to fuck a toaster?",
+        image: ".assets/images/transition/28.webp",
         options: [
                 {
                 text: "YES",
@@ -589,6 +624,7 @@ const textNodes = [
     {
         id: 29,
         text: "Do you like STAR TREK?",
+        image: ".assets/images/transition/29.webp",
         options: [
                 {
                 text: "YES",
@@ -607,6 +643,7 @@ const textNodes = [
     {
         id: 30,
         text: "Do you like Pirate Movies?",
+        image: ".assets/images/transition/30.webp",
         options: [
                 {
                 text: "YES",
@@ -625,6 +662,7 @@ const textNodes = [
     {
         id: 31,
         text: "Are you an Edgelord?",
+        image: ".assets/images/transition/31.webp",
         options: [
                 {
                 text: "YES",
@@ -643,6 +681,7 @@ const textNodes = [
     {
         id: 32,
         text: "Are you a pervert?",
+        image: ".assets/images/transition/32.webp",
         options: [
                 {
                 text: "YES",
@@ -661,6 +700,7 @@ const textNodes = [
     {
         id: 33,
         text: "Do you enjoy playing evil?",
+        image: ".assets/images/transition/33.webp",
         options: [
                 {
                 text: "YES",
@@ -679,6 +719,7 @@ const textNodes = [
     {
         id: 34,
         text: "Do you care about animals more than humans?",
+        image: ".assets/images/transition/34.webp",
         options: [
                 {
                 text: "YES",
@@ -697,6 +738,7 @@ const textNodes = [
     {
         id: 35,
         text: "Do you mind if people make fun of you?",
+        image: ".assets/images/transition/35.webp",
         options: [
                 {
                 text: "YES",
@@ -715,6 +757,7 @@ const textNodes = [
     {
         id: 36,
         text: "Do you care about your hygene?",
+        image: ".assets/images/transition/36.webp",
         options: [
                 {
                 text: "YES",
@@ -733,6 +776,7 @@ const textNodes = [
     {
         id: 37,
         text: "Do you think evil needs a bit of order as well?",
+        image: ".assets/images/transition/37.webp",
         options: [
                 {
                 text: "YES",
@@ -755,7 +799,7 @@ const textNodes = [
     {
         id: 100,
         text: "Sorry mate! You should not play Kill Team if you value your money. Consider investing in Games Workshop Stocks instead.", // tbd
-        img: ".assets/images/results/gwstocks.webp",
+        image: ".assets/images/results/gwstocks.webp",
         options: [
                 {
                 text: "Restart",
@@ -767,7 +811,7 @@ const textNodes = [
     {
         id: 101,
         text: "The results are in! You might like the PHOBOS STRIKE TEAM",
-        img: ".assets/images/results/phobosstriketeam.webp",
+        image: ".assets/images/results/phobosstriketeam.webp",
         options: [
                 {
                 text: "Restart",
@@ -778,7 +822,7 @@ const textNodes = [
     {
         id: 102,
         text: "The results are in! You might like the ANGELS OF DEATH Team",
-        img: ".assets/images/results/angelsdeath.webp",
+        image: ".assets/images/results/angelsdeath.webp",
         options: [
                 {
                 text: "Restart",
@@ -789,7 +833,7 @@ const textNodes = [
     {
         id: 103,
         text: "The results are in! You might like the LEGIONAIRES Team",
-        img: ".assets/images/results/legionaires.webp",
+        image: ".assets/images/results/legionaires.webp",
         options: [
                 {
                 text: "Restart",
@@ -800,7 +844,7 @@ const textNodes = [
     {
         id: 104,
         text: "The results are in! You might like the NEMESIS CLAW Team",
-        img: ".assets/images/results/nemesisclaw.webp",
+        image: ".assets/images/results/nemesisclaw.webp",
         options: [
                 {
                 text: "Restart",
@@ -811,7 +855,7 @@ const textNodes = [
     {
         id: 105,
         text: "The results are in! You might like the PLAGUE MARINES Team",
-        img: ".assets/images/results/plaguemarines.webp",
+        image: ".assets/images/results/plaguemarines.webp",
         options: [
                 {
                 text: "Restart",
@@ -822,7 +866,7 @@ const textNodes = [
     {
         id: 106,
         text: "The results are in! You might like the WRECKA CREW Team",
-        img: ".assets/images/results/wreckacrew.webp",
+        image: ".assets/images/results/wreckacrew.webp",
         options: [
                 {
                 text: "Restart",
@@ -833,7 +877,7 @@ const textNodes = [
     {
         id: 107,
         text: "The results are in! You might like the HIEROTEK CIRCLE Team",
-        img: ".assets/images/results/hierotekcircle.webp",
+        image: ".assets/images/results/hierotekcircle.webp",
         options: [
                 {
                 text: "Restart",
@@ -844,7 +888,7 @@ const textNodes = [
     {
         id: 108,
         text: "The results are in! You might like the WARP COVEN Team",
-        img: ".assets/images/results/warpcoven.webp",
+        image: ".assets/images/results/warpcoven.webp",
         options: [
                 {
                 text: "Restart",
@@ -856,7 +900,7 @@ const textNodes = [
     {
         id: 109,
         text: "The results are in! You might like the PATHFINDER",
-        img: ".assets/images/results/pathfinder.webp",
+        image: ".assets/images/results/pathfinder.webp",
         options: [
                 {
                 text: "Restart",
@@ -867,7 +911,7 @@ const textNodes = [
     {
         id: 110,
         text: "The results are in! You might like the CORSAIR VOIDSCARRED Team",
-        img: ".assets/images/results/corsairvoidscarred.webp",
+        image: ".assets/images/results/corsairvoidscarred.webp",
         options: [
                 {
                 text: "Restart",
@@ -878,7 +922,7 @@ const textNodes = [
     {
         id: 111,
         text: "The results are in! You might like the VOID DANCER TROUPE Team",
-        img: ".assets/images/results/voiddancertroupe.webp",
+        image: ".assets/images/results/voiddancertroupe.webp",
         options: [
                 {
                 text: "Restart",
@@ -889,7 +933,7 @@ const textNodes = [
     {
         id: 112,
         text: "The results are in! You might like the KOMMANDOS Team",
-        img: ".assets/images/results/kommandos.webp",
+        image: ".assets/images/results/kommandos.webp",
         options: [
                 {
                 text: "Restart",
@@ -900,7 +944,7 @@ const textNodes = [
     {
         id: 113,
         text: "The results are in! You might like the VESPID STINGWINGS Team",
-        img: ".assets/images/results/vespidstingwings.webp",
+        image: ".assets/images/results/vespidstingwings.webp",
         options: [
                 {
                 text: "Restart",
@@ -911,7 +955,7 @@ const textNodes = [
     {
         id: 114,
         text: "The results are in! You might like the FARSTALKER KINBAND Team",
-        img: ".assets/images/results/farstalkerkinband.webp",
+        image: ".assets/images/results/farstalkerkinband.webp",
         options: [
                 {
                 text: "Restart",
@@ -922,7 +966,7 @@ const textNodes = [
     {
         id: 115,
         text: "The results are in! You might like the TEMPESTUS AQUILONS Team",
-        img: ".assets/images/results/tempestusaquilons.webp",
+        image: ".assets/images/results/tempestusaquilons.webp",
         options: [
                 {
                 text: "Restart",
@@ -933,7 +977,7 @@ const textNodes = [
     {
         id: 116,
         text: "The results are in! You might like the NOVITIATES Team",
-        img: ".assets/images/results/novitiates.webp",
+        image: ".assets/images/results/novitiates.webp",
         options: [
                 {
                 text: "Restart",
@@ -944,7 +988,7 @@ const textNodes = [
     {
         id: 117,
         text: "The results are in! You might like the INQUISITORIAL AGENTS Team",
-        img: ".assets/images/results/inquisitorialagents.webp",
+        image: ".assets/images/results/inquisitorialagents.webp",
         options: [
                 {
                 text: "Restart",
@@ -955,7 +999,7 @@ const textNodes = [
     {
         id: 118,
         text: "The results are in! You might like the KASRKIN Team",
-        img: ".assets/images/results/kasrkin.webp",
+        image: ".assets/images/results/kasrkin.webp",
         options: [
                 {
                 text: "Restart",
@@ -966,7 +1010,7 @@ const textNodes = [
     {
         id: 119,
         text: "The results are in! You might like the DEATH KORPS Team",
-        img: ".assets/images/results/deathkorps.webp",
+        image: ".assets/images/results/deathkorps.webp",
         options: [
                 {
                 text: "Restart",
@@ -977,7 +1021,7 @@ const textNodes = [
     {
         id: 120,
         text: "The results are in! You might like the EXACTION SQUAD Team",
-        img: ".assets/images/results/exactionsquad.webp",
+        image: ".assets/images/results/exactionsquad.webp",
         options: [
                 {
                 text: "Restart",
@@ -988,7 +1032,7 @@ const textNodes = [
     {
         id: 121,
         text: "The results are in! You might like the SCOUT SQUAD Team",
-        img: ".assets/images/results/scoutsquad.webp",
+        image: ".assets/images/results/scoutsquad.webp",
         options: [
                 {
                 text: "Restart",
@@ -999,7 +1043,7 @@ const textNodes = [
     {
         id: 122,
         text: "The results are in! You might like the RATLINGS Team",
-        img: ".assets/images/results/ratlings.webp",
+        image: ".assets/images/results/ratlings.webp",
         options: [
                 {
                 text: "Restart",
@@ -1010,7 +1054,7 @@ const textNodes = [
     {
         id: 123,
         text: "The results are in! You might like the HUNTER CLADE Team",
-        img: ".assets/images/results/hunterclade.webp",
+        image: ".assets/images/results/hunterclade.webp",
         options: [
                 {
                 text: "Restart",
@@ -1021,7 +1065,7 @@ const textNodes = [
     {
         id: 124,
         text: "The results are in! You might like the HEARTHKYN SALVAGERS Team",
-        img: ".assets/images/results/hearthkynsalvagers.webp",
+        image: ".assets/images/results/hearthkynsalvagers.webp",
         options: [
                 {
                 text: "Restart",
@@ -1032,7 +1076,7 @@ const textNodes = [
     {
         id: 125,
         text: "The results are in! You might like the ELUCIDIAN STARSTRIDERS Team",
-        img: ".assets/images/results/elucidianstarstriders.webp",
+        image: ".assets/images/results/elucidianstarstriders.webp",
         options: [
                 {
                 text: "Restart",
@@ -1043,7 +1087,7 @@ const textNodes = [
     {
         id: 126,
         text: "The results are in! You might like the IMPERIAL NAVY BREACHERS Team",
-        img: ".assets/images/results/imperialnavybreachers.webp",
+        image: ".assets/images/results/imperialnavybreachers.webp",
         options: [
                 {
                 text: "Restart",
@@ -1054,7 +1098,7 @@ const textNodes = [
     {
         id: 127,
         text: "The results are in! You might like the HERNKIN YAEGIRS Team",
-        img: ".assets/images/results/hernkinyaegirs.webp",
+        image: ".assets/images/results/hernkinyaegirs.webp",
         options: [
                 {
                 text: "Restart",
@@ -1065,7 +1109,7 @@ const textNodes = [
     {
         id: 128,
         text: "The results are in! You might like the HAND OF THE ARCHON Team",
-        img: ".assets/images/results/handarchon.webp",
+        image: ".assets/images/results/handarchon.webp",
         options: [
                 {
                 text: "Restart",
@@ -1076,7 +1120,7 @@ const textNodes = [
     {
         id: 129,
         text: "The results are in! You might like the MANDRAKES Team",
-        img: ".assets/images/results/mandrakes.webp",
+        image: ".assets/images/results/mandrakes.webp",
         options: [
                 {
                 text: "Restart",
@@ -1087,7 +1131,7 @@ const textNodes = [
     {
         id: 130,
         text: "The results are in! You might like the FELLGOR RAVAGERS Team",
-        img: ".assets/images/results/fellgorravagers.webp",
+        image: ".assets/images/results/fellgorravagers.webp",
         options: [
                 {
                 text: "Restart",
@@ -1098,7 +1142,7 @@ const textNodes = [
     {
         id: 131,
         text: "The results are in! You might like the BROOD BROTHERS Team",
-        img: ".assets/images/results/broodbrothers.webp",
+        image: ".assets/images/results/broodbrothers.webp",
         options: [
                 {
                 text: "Restart",
@@ -1109,7 +1153,7 @@ const textNodes = [
     {
         id: 132,
         text: "The results are in! You might like the WYRMBLADE Team",
-        img: ".assets/images/results/wyrmblade.webp",
+        image: ".assets/images/results/wyrmblade.webp",
         options: [
                 {
                 text: "Restart",
@@ -1120,7 +1164,7 @@ const textNodes = [
     {
         id: 133,
         text: "The results are in! You might like the GELLERPOX INFECTED Team",
-        img: ".assets/images/results/gellerpoxinfected.webp",
+        image: ".assets/images/results/gellerpoxinfected.webp",
         options: [
                 {
                 text: "Restart",
@@ -1131,7 +1175,7 @@ const textNodes = [
     {
         id: 134,
         text: "The results are in! You might like the BLOODED Team",
-        img: ".assets/images/results/blooded.webp",
+        image: ".assets/images/results/blooded.webp",
         options: [
                 {
                 text: "Restart",
@@ -1142,7 +1186,7 @@ const textNodes = [
     {
         id: 135,
         text: "The results are in! You might like the CHAOS CULT Team",
-        img: ".assets/images/results/chaoscult.webp",
+        image: ".assets/images/results/chaoscult.webp",
         options: [
                 {
                 text: "Restart",
@@ -1153,7 +1197,7 @@ const textNodes = [
     {
         id: 136,
         text: "The results are in! You might like the BLADES OF KHAINE Team",
-        img: ".assets/images/results/bladeskhaine.webp",
+        image: ".assets/images/results/bladeskhaine.webp",
         options: [
                 {
                 text: "Restart",
