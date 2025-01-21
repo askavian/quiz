@@ -1,40 +1,5 @@
 
 // loads neccessary elements from DOM 
-/*
-const textElement = document.getElementById("text");
-const imageElement = document.getElementById("image");
-const btn = document.getElementById("button");
-const btnyes = document.getElementById("button-yes");
-const btnno = document.getElementById("button-no");
-const btnstart = document.getElementById("button-start");
-const btnstartnew = document.getElementById("button-startnew");
-
-console.log(document.getElementById("text")); //DEBUGGING check if DOM is called correctly
-
-function startQuiz() {
-    showTextNode(1)
-}
-
-function showTextNode(textNodeIndex) {
-    const textNode = textNodes.find((textNode) => textNode.id === textNodeIndex);
-    textElement.innerText = textNode.text;
-    while (btn.firstChild) {
-        btn.removeChild(btn.firstChild)
-      }
-      
-
-
- };
-
-function selectOption(option) {
-
-}
-
-
-
-console.log(startQuiz.showTextNode); //DEBUGGING check if function is called correctly
-*/ 
-
 const imageElement = document.getElementById('image');
 const textElement = document.getElementById('text');
 const optionButtonsElement = document.getElementById('button')
@@ -53,14 +18,41 @@ function startGame() {
 function showTextNode(textNodeIndex) {
   const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
   textElement.innerText = textNode.text;
-  imageElement.src = textNode.image;
-  // this.imageElement.src = textNode.image;
-  
   document.getElementById('image').src = textNode.image
   while (optionButtonsElement.firstChild) {
     optionButtonsElement.removeChild(optionButtonsElement.firstChild)
   }
- /*   
+
+// hides all buttons by default  
+  while (optionButtonsElementStart) {
+    optionButtonsElementStart.remove(optionButtonsElementStart)
+  };
+  while (optionButtonsElementNo) {
+    optionButtonsElementNo.remove(optionButtonsElementNo)
+  };
+  while (optionButtonsElementYes) {
+    optionButtonsElementYes.remove(optionButtonsElementYes)
+  };
+  while (optionButtonsElementStartnew) {
+    optionButtonsElementStartnew.remove(optionButtonsElementStartnew)
+  };
+
+
+
+
+
+
+ textNode.options.forEach(option => {
+    if (showOption(option)) {
+      const button = document.createElement('button')
+      button.innerText = option.text
+      button.classList.add('btn')
+      button.addEventListener('click', () => selectOption(option))
+      optionButtonsElement.appendChild(button)
+    }
+  })
+ 
+ /*
  document.addEventListener("DOMContentLoaded", showOption);
    function showOption() {
     if(textNode.options.text === "Begin") {
@@ -84,6 +76,9 @@ function showTextNode(textNodeIndex) {
         optionButtonsElementStartnew.style.display = `block`;
     };
    }
+*/    
+
+/*
   if (textNode.options.text != "YES") {
     optionButtonsElementYes.remove(optionButtonsElementYes);
    }
@@ -101,11 +96,7 @@ function showTextNode(textNodeIndex) {
 
 // document.addEventListener("DOMContentLoaded", showOption);
 
-  // this.imageElement.src = textNode.img;
-
-  //image.src = textNode.image; // <--- bam
-
-  
+/*
   textNode.options.forEach(option => {
     if (showOption(option)) {
       const button = document.createElement('button')
@@ -115,6 +106,7 @@ function showTextNode(textNodeIndex) {
       optionButtonsElement.appendChild(button)
     }
   })
+*/    
 }
 
 
@@ -130,12 +122,6 @@ function selectOption(option) {
   state = Object.assign(state, option.setState)
   showTextNode(nextTextNodeId)
 }
-
-
-
-
-// console.log(startQuiz); DEBUGGING check if function is called correctly
-
 
 /*
 * Nodes with a ONE or TWO digit ids are NAV NOTES They cannot be the END
@@ -1253,7 +1239,5 @@ const textNodes = [
             ],
         },                                                           
 ]
-
-console.log("TEST"); // for debugging only
 
 startGame(); // Loads Quiz as soon as everything is ready
