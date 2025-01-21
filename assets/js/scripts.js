@@ -36,8 +36,12 @@ console.log(startQuiz.showTextNode); //DEBUGGING check if function is called cor
 */ 
 
 const imageElement = document.getElementById('image');
-const textElement = document.getElementById('text')
+const textElement = document.getElementById('text');
 const optionButtonsElement = document.getElementById('button')
+const optionButtonsElementYes = document.getElementById(`button-yes`);
+const optionButtonsElementNo = document.getElementById(`button-no`);
+const optionButtonsElementStart = document.getElementById(`button-start`);
+const optionButtonsElementStartnew = document.getElementById(`button-startnew`);
 
 let state = {}
 
@@ -51,15 +55,57 @@ function showTextNode(textNodeIndex) {
   textElement.innerText = textNode.text;
   imageElement.src = textNode.image;
   // this.imageElement.src = textNode.image;
+  
   document.getElementById('image').src = textNode.image
   while (optionButtonsElement.firstChild) {
     optionButtonsElement.removeChild(optionButtonsElement.firstChild)
   }
+ /*   
+ document.addEventListener("DOMContentLoaded", showOption);
+   function showOption() {
+    if(textNode.options.text === "Begin") {
+        optionButtonsElementStart.style.display = `none`;
+    } else {
+        optionButtonsElementStart.style.display = `block`;
+    };
+    if(textNode.options.text === "YES") {
+        optionButtonsElementYes.style.display = `none`;
+    } else {
+        optionButtonsElementYes.style.display = `block`;
+    };
+    if(textNode.options.text === "NO") {
+        optionButtonsElementNo.style.display = `none`;
+    } else {
+        optionButtonsElementNo.style.display = `block`;
+    };
+    if(textNode.options.text === "Restart") {
+        optionButtonsElementStartnew.style.display = `none`;
+    } else {
+        optionButtonsElementStartnew.style.display = `block`;
+    };
+   }
+  if (textNode.options.text != "YES") {
+    optionButtonsElementYes.remove(optionButtonsElementYes);
+   }
+   if (textNode.options.text != "NO") {
+    optionButtonsElementNo.remove(optionButtonsElementNo);
+   }
+ //  if (textNode.options.text != "Begin") {
+ //   optionButtonsElementStart.remove(optionButtonsElementStart);
+ //  }
+   if (textNode.options.text != "Restart") {
+    optionButtonsElementStartnew.remove(optionButtonsElementStartnew);
+   }
+*/
+
+
+// document.addEventListener("DOMContentLoaded", showOption);
 
   // this.imageElement.src = textNode.img;
 
   //image.src = textNode.image; // <--- bam
 
+  
   textNode.options.forEach(option => {
     if (showOption(option)) {
       const button = document.createElement('button')
@@ -70,6 +116,7 @@ function showTextNode(textNodeIndex) {
     }
   })
 }
+
 
 function showOption(option) {
   return option.requiredState == null || option.requiredState(state)
