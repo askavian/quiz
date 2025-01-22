@@ -45,6 +45,11 @@ header h1 {
     text-align: center;
 }
 
+.name-input {
+    text-align: center;
+    padding-bottom: 5px;
+}
+
 button {
     border: none;
     color: #000;

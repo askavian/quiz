@@ -7,6 +7,8 @@ const optionButtonsElementYes = document.getElementById(`button-yes`);
 const optionButtonsElementNo = document.getElementById(`button-no`);
 const optionButtonsElementStart = document.getElementById(`button-start`);
 const optionButtonsElementStartnew = document.getElementById(`button-startnew`);
+const nameInput = document.getElementById(`name-input`);
+const submit = document.getElementById(`submit`);
 
 let state = {}
 
@@ -20,18 +22,19 @@ function showTextNode(textNodeIndex) {
   textElement.innerText = textNode.text; // shows text from Index
   imageElement.src = textNode.image; // shows image from Index
 
-/*
+
   while (optionButtonsElement.firstChild) {
     optionButtonsElement.removeChild(optionButtonsElement.firstChild)
   }
-    */  
+
 
 // hides all buttons by default    
-  optionButtonsElementStart.style.visibility = `hidden`;
-  optionButtonsElementStartnew.style.visibility = `hidden`;
-  optionButtonsElementYes.style.visibility = `hidden`;
-  optionButtonsElementNo.style.visibility = `hidden`;
+//  optionButtonsElementStart.style.visibility = `hidden`;
+//  optionButtonsElementStartnew.style.visibility = `hidden`;
+//  optionButtonsElementYes.style.visibility = `hidden`;
+//  optionButtonsElementNo.style.visibility = `hidden`;
 
+  /*
   textNode.options.forEach(option => {
     if (showOption(option.text === `Begin`)) {
       optionButtonsElementStart.style.visibility = `visible`;
@@ -54,13 +57,13 @@ function showTextNode(textNodeIndex) {
       optionButtonsElementNo.addEventListener('click', () => selectOption(option))
     }
   })
-
+*/
 
 
   
 
 
-/*
+
   textNode.options.forEach(option => {
     if (showOption(option)) {
       const button = document.createElement('button')
@@ -70,7 +73,7 @@ function showTextNode(textNodeIndex) {
       optionButtonsElement.appendChild(button)
     }
   })
-*/    
+    
 }
 
 
