@@ -61,10 +61,6 @@ button {
     margin-right: 2.5%;
 }
 
-.show {
-    display: block;
-}
-
 .button:last-child {
     margin-right: 0;
 }

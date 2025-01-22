@@ -17,84 +17,48 @@ function startGame() {
 
 function showTextNode(textNodeIndex) {
   const textNode = textNodes.find(textNode => textNode.id === textNodeIndex)
-  textElement.innerText = textNode.text;
-  document.getElementById('image').src = textNode.image
+  textElement.innerText = textNode.text; // shows text from Index
+  imageElement.src = textNode.image; // shows image from Index
+
+/*
   while (optionButtonsElement.firstChild) {
     optionButtonsElement.removeChild(optionButtonsElement.firstChild)
   }
+    */  
 
-// hides all buttons by default  
-  while (optionButtonsElementStart) {
-    optionButtonsElementStart.remove(optionButtonsElementStart)
-  };
-  while (optionButtonsElementNo) {
-    optionButtonsElementNo.remove(optionButtonsElementNo)
-  };
-  while (optionButtonsElementYes) {
-    optionButtonsElementYes.remove(optionButtonsElementYes)
-  };
-  while (optionButtonsElementStartnew) {
-    optionButtonsElementStartnew.remove(optionButtonsElementStartnew)
-  };
+// hides all buttons by default    
+  optionButtonsElementStart.style.visibility = `hidden`;
+  optionButtonsElementStartnew.style.visibility = `hidden`;
+  optionButtonsElementYes.style.visibility = `hidden`;
+  optionButtonsElementNo.style.visibility = `hidden`;
 
-
-
-
-
-
- textNode.options.forEach(option => {
-    if (showOption(option)) {
-      const button = document.createElement('button')
-      button.innerText = option.text
-      button.classList.add('btn')
-      button.addEventListener('click', () => selectOption(option))
-      optionButtonsElement.appendChild(button)
+  textNode.options.forEach(option => {
+    if (showOption(option.text === `Begin`)) {
+      optionButtonsElementStart.style.visibility = `visible`;
+      optionButtonsElementStart.innerText = "Begin";
+      optionButtonsElementStart.addEventListener('click', () => selectOption(option))
+    } 
+    if (showOption(option.text === `Restart`)) {
+      optionButtonsElementStartnew.style.visibility = `visible`;
+      optionButtonsElementStartnew.innerText = "Restart";
+      optionButtonsElementStart.addEventListener('click', () => selectOption(option))
+    }
+    if (showOption(option.text === `YES`)) {
+      optionButtonsElementYes.style.visibility = `visible`;
+      optionButtonsElementYes.innerText = "YES";
+      optionButtonsElementYes.addEventListener('click', () => selectOption(option))
+    }  
+    if (showOption(option.text === `NO`)) {
+      optionButtonsElementNo.style.visibility = `visible`;
+      optionButtonsElementNo.innerText = "NO";
+      optionButtonsElementNo.addEventListener('click', () => selectOption(option))
     }
   })
- 
- /*
- document.addEventListener("DOMContentLoaded", showOption);
-   function showOption() {
-    if(textNode.options.text === "Begin") {
-        optionButtonsElementStart.style.display = `none`;
-    } else {
-        optionButtonsElementStart.style.display = `block`;
-    };
-    if(textNode.options.text === "YES") {
-        optionButtonsElementYes.style.display = `none`;
-    } else {
-        optionButtonsElementYes.style.display = `block`;
-    };
-    if(textNode.options.text === "NO") {
-        optionButtonsElementNo.style.display = `none`;
-    } else {
-        optionButtonsElementNo.style.display = `block`;
-    };
-    if(textNode.options.text === "Restart") {
-        optionButtonsElementStartnew.style.display = `none`;
-    } else {
-        optionButtonsElementStartnew.style.display = `block`;
-    };
-   }
-*/    
-
-/*
-  if (textNode.options.text != "YES") {
-    optionButtonsElementYes.remove(optionButtonsElementYes);
-   }
-   if (textNode.options.text != "NO") {
-    optionButtonsElementNo.remove(optionButtonsElementNo);
-   }
- //  if (textNode.options.text != "Begin") {
- //   optionButtonsElementStart.remove(optionButtonsElementStart);
- //  }
-   if (textNode.options.text != "Restart") {
-    optionButtonsElementStartnew.remove(optionButtonsElementStartnew);
-   }
-*/
 
 
-// document.addEventListener("DOMContentLoaded", showOption);
+
+  
+
 
 /*
   textNode.options.forEach(option => {
